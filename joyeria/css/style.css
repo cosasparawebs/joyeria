@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple-dark: #170312;
+    --purple-mediu: #33032d;
+    --purple-light: #531253;
+    --grey-light: #eaeaea;
+    --white: #f4fffd;
+}
+
+body{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    font-size: 22px;
+}
+
+/* ---------------------HEADER */
+
+.contenido-header{
+    width: 100%;
+    height: 100vh; /* estableche el alto del dispositivo que se esta usando */
+    background-image: url(../img/bg-girl.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenido-header .fondo{
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    /* background-image: url(../img/bg-top.png); */
+}
+
+.contenido-header .texto{
+    width: calc(100vw - 20px);
+    height: 100vh;
+    font-size: 90px;
+    font-weight: 400;
+    font-family: 'Noto-serif', serif;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: purple;
+    mix-blend-mode: multiply;
+}
+
+/* -----------------MENU */
+
+.menu{
+    background-color: var(--purple-mediu);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto serif', serif;
+    font-style: italic;
+    margin-bottom: 60px;
+
+}
+
+.menu a{
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 26px;
+    background-color: var(--purple-mediu);
+    margin: 0 10px;
+    transition: .5s ease all;
+    color: var(--grey-light);
+    text-decoration: none;
+}
+
+.menu a:hover{
+    transform: translateY(18px);
+    background-color: var(--purple-light);
+}
+
+/* ------------------SECCION NOSOTROS */
+
+.nosotros{
+    margin-bottom: 60px;
+}
+
+.subtitulo{
+    font-size: 20ox;
+    color: var(--purple-dark);
+    font-family: 'Noto serif', serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitulo span{
+    background-color: var(--grey-light);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.subtitulo::after{
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+    top: -50px;
+    z-index: 1;
+}
+
+.nosotros .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.nosotros .enlace{
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--purple-light);
+    font-weight: 700;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease all;
+}
+
+.nosotros .enlace:hover{
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--purple-light);
+}
+
+/* ----------------------SECCION SERVICIOS */
+
+.productos {
+    background: var(--grey-light);
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.productos .titulo{
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.productos .producto{
+    position: relative;
+    width: 100%;
+}
+
+.productos .overlay{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--purple-light);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.productos .producto:hover .overlay{
+    width: 100%;
+    opacity: .8;
+
+}
+
+.productos .producto .overlay-texto{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.productos .btn-productos{
+    background-color: var(--purple-light);
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+
+.productos .btn-productos:hover{
+    background-color: transparent;
+    border: 2px solid var(--purple-light);
+    color: var(--purple-light);
+}
+
+/* --------------------SEPARADOR */
+
+.separador{
+    width: 100%;
+    height: 250px;
+    background-image: url('../img/bg-separator.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 60px;
+}
+
+.separador p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 24px;
+    font-family: 'Noto serif', serif;
+    padding: 10px;
+}
+
+/* ----------------SECCION CONTACTO */
+
+.acerca-de{
+    margin-bottom: 60px;
+}
+
+/* ---------------SECCION GALERIA */
+
+.galeria{
+    margin-bottom: 60px;
+
+}
+
+.galeria img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ----------------------FOOTER */
+
+.contacto{
+    margin-bottom: 60px;
+}
+
+.redes-sociales{
+    padding: 10px;
+    background-color: var(--purple-light);
+}
+
+.redes-sociales img{
+    padding: 5px;
+    border-radius: 100%;
+    width: 50px;
+    transition: .3s ease all;
+}
+
+.redes-sociales img:hover{
+    transform: scale(1.5);
+}
+
+/* ---------------RESPONSIVE */
+
+@media screen and (max-width: 992px){
+    p{
+        font-size: 18px;
+    }
+
+    .contenido-header .texto{
+        font-size: 60px;
+    }
+
+    .menu a{
+        font-size: 20px;
+    }
+
+    .nosotros .titulo,
+    .productos .titulo{
+        font-size: 30px;
+    }
+}
